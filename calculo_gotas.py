@@ -1,6 +1,9 @@
 # ESTE SISTEMA É UTILIZADO POR EQUIPE MÉDICA E PRINCIPALMENTE PELA A EQUIPE DE ENFERMAGEM PARA A ADMINISTRAÇÃO DE MEDICAÇÕES LÍQUIDAS POR UM DERTERMINADO TEMPO E COM UMA DETERMINADA VELOCIDADE, SENDO MEDIDO PELA QUANTIDADE DE GOTAS POR MINUTO.
 tipo = str(input(
     'Digite o nome do cálculo, se é MACROGOTAS ou MICROGOTAS: ')).strip().upper()
+while tipo != 'MACROGOTAS' and tipo != 'MICROGOTAS':
+    tipo = str(input(
+        'Digite o nome do cálculo, se é MACROGOTAS ou MICROGOTAS: ')).strip().upper()
 volume = int(input('Quantos ml de líquido será infudido? '))
 tempo = float(input('Em quantas horas foi prescrito? '))
 calculo_macro = volume / (tempo * 3)
